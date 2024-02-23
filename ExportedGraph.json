@@ -1,0 +1,628 @@
+{
+    "digitalTwinsFileInfo": {
+        "fileVersion": "1.0.0"
+    },
+    "digitalTwinsGraph": {
+        "digitalTwins": [
+            {
+                "$dtId": "THF-WA-00",
+                "$etag": "W/\"5ee5f630-3a06-43f0-8a35-173e2d2f7798\"",
+                "$metadata": {
+                    "$model": "dtmi:com:rg_az220:thf_sensor;1"
+                }
+            },
+            {
+                "$dtId": "THF-FA-00",
+                "$etag": "W/\"8afda100-ec14-40c8-9c61-e78247c2ad67\"",
+                "$metadata": {
+                    "$model": "dtmi:com:rg_az220:thf_sensor;1"
+                }
+            },
+            {
+                "$dtId": "GPS-CO-00",
+                "$etag": "W/\"237fb8db-c967-4219-b2a4-ef59521fd2e2\"",
+                "gps_date_time": "2023-10-21T10:44:39",
+                "$metadata": {
+                    "$model": "dtmi:com:rg_az220:gps_device;1"
+                }
+            },
+            {
+                "$dtId": "FA-00",
+                "$etag": "W/\"bf358e57-e0b6-4af6-8eb6-dceaf728dfb1\"",
+                "$metadata": {
+                    "$model": "dtmi:com:rg_az220:factory;1"
+                }
+            },
+            {
+                "$dtId": "CO-00",
+                "$etag": "W/\"e173e41a-f850-4bb2-9986-e41f9fddacd6\"",
+                "$metadata": {
+                    "$model": "dtmi:com:rg_az220:container;1"
+                }
+            },
+            {
+                "$dtId": "WA-00",
+                "$etag": "W/\"55cae458-1af7-4d96-ab36-e401aa586360\"",
+                "$metadata": {
+                    "$model": "dtmi:com:rg_az220:warehouse;1"
+                }
+            },
+            {
+                "$dtId": "THF-CO-00",
+                "$etag": "W/\"f5ce57fd-ae96-4d86-8ee6-a38eabad1dad\"",
+                "temperature": 21.2,
+                "humidity": 91,
+                "desired_temperature": 20,
+                "desired_humidity": 90,
+                "temperature_alert": true,
+                "humidity_alert": false,
+                "$metadata": {
+                    "$model": "dtmi:com:rg_az220:thf_sensor;1"
+                }
+            },
+            {
+                "$dtId": "RA-FA-00",
+                "$etag": "W/\"928fe432-d3e8-4df7-af89-e307c9713382\"",
+                "angle": {
+                    "angle_1": 0,
+                    "angle_2": 0,
+                    "angle_3": 0,
+                    "angle_4": 0,
+                    "angle_5": 0
+                },
+                "$metadata": {
+                    "$model": "dtmi:com:rg_az220:robot_arm;1"
+                }
+            },
+            {
+                "$dtId": "CO-01",
+                "$etag": "W/\"77b12800-3188-47c1-90d1-700fa3b54aab\"",
+                "$metadata": {
+                    "$model": "dtmi:com:rg_az220:container;1"
+                }
+            },
+            {
+                "$dtId": "THF-CO-01",
+                "$etag": "W/\"c0ae27ea-f4d2-48a9-81e6-c61b1900b18a\"",
+                "$metadata": {
+                    "$model": "dtmi:com:rg_az220:thf_sensor;1"
+                }
+            },
+            {
+                "$dtId": "GPS-CO-01",
+                "$etag": "W/\"ad7f0b9e-b13d-4764-84b1-498f7bf46077\"",
+                "$metadata": {
+                    "$model": "dtmi:com:rg_az220:gps_device;1"
+                }
+            }
+        ],
+        "relationships": [
+            {
+                "$relationshipId": "9959b6c9-3e1b-4c2b-b239-7dd90682145d",
+                "$sourceId": "CO-00",
+                "$targetId": "GPS-CO-00",
+                "$relationshipName": "con_gps",
+                "$etag": "W/\"3bdaa2e5-4c7d-4d22-b6d4-33ff39eb4262\""
+            },
+            {
+                "$relationshipId": "3b10d137-1c67-4924-9d22-32983b000e86",
+                "$sourceId": "CO-00",
+                "$targetId": "THF-CO-00",
+                "$relationshipName": "con_thf",
+                "$etag": "W/\"002622b2-19c6-44b7-a1e4-1c9e70a9193c\""
+            },
+            {
+                "$relationshipId": "cb3e39ce-991e-4c2d-ab51-6aee4146eb08",
+                "$sourceId": "WA-00",
+                "$targetId": "THF-WA-00",
+                "$relationshipName": "ware_thf",
+                "$etag": "W/\"aa5a8fae-8e2f-4d49-bc71-87cf7f8af37b\""
+            },
+            {
+                "$relationshipId": "fdba4f2a-a3d0-4559-9c90-527d87c544b1",
+                "$sourceId": "WA-00",
+                "$targetId": "CO-00",
+                "$relationshipName": "ware_con",
+                "$etag": "W/\"e174708f-de59-41b9-8f6f-5b5a38f80df8\""
+            },
+            {
+                "$relationshipId": "d2c3f048-21a7-4b6c-8ad6-02cf69f862dc",
+                "$sourceId": "WA-00",
+                "$targetId": "CO-01",
+                "$relationshipName": "ware_con",
+                "$etag": "W/\"196fe11f-82f4-4e03-bbe6-d0b308f6d905\""
+            },
+            {
+                "$relationshipId": "9203e02e-0653-4720-8af7-521b44a72f0d",
+                "$sourceId": "FA-00",
+                "$targetId": "THF-FA-00",
+                "$relationshipName": "fac_thf",
+                "$etag": "W/\"e4082e95-e0a6-4e53-9c1f-0bb5c25c5dd4\""
+            },
+            {
+                "$relationshipId": "ffd53f7b-780c-4c6c-a3f2-82261af4b8f8",
+                "$sourceId": "FA-00",
+                "$targetId": "CO-00",
+                "$relationshipName": "fac_con",
+                "$etag": "W/\"262bdbc2-493c-4ae3-bb8d-db1bb3432fc7\""
+            },
+            {
+                "$relationshipId": "6c19269d-54a0-4f83-bef7-efeb2fecc6c2",
+                "$sourceId": "FA-00",
+                "$targetId": "RA-FA-00",
+                "$relationshipName": "fac_ra",
+                "$etag": "W/\"a6ddd787-53c9-461c-a9ab-16d40e371c77\""
+            },
+            {
+                "$relationshipId": "1afdde97-862a-4ce1-a6f1-5e2f2d6b482b",
+                "$sourceId": "FA-00",
+                "$targetId": "CO-01",
+                "$relationshipName": "fac_con",
+                "$etag": "W/\"1a7df27d-28f2-4883-8bf9-cec455605c82\""
+            },
+            {
+                "$relationshipId": "53e78d4c-0799-4f4b-b9a1-055cbc632f25",
+                "$sourceId": "CO-01",
+                "$targetId": "GPS-CO-01",
+                "$relationshipName": "con_gps",
+                "$etag": "W/\"b1b436e5-42af-4e8e-a7db-4a517c862d9e\""
+            },
+            {
+                "$relationshipId": "c72ca730-e78f-4b49-858d-13a44d035453",
+                "$sourceId": "CO-01",
+                "$targetId": "THF-CO-01",
+                "$relationshipName": "con_thf",
+                "$etag": "W/\"a3e71475-b06b-42de-bd69-90c4be60de0c\""
+            }
+        ]
+    },
+    "digitalTwinsModels": [
+        {
+            "@context": "dtmi:dtdl:context;2",
+            "@id": "dtmi:com:rg_az220:gps_device;1",
+            "@type": "Interface",
+            "displayName": "GPS Device",
+            "contents": [
+                {
+                    "@type": "Property",
+                    "name": "gps_device_id",
+                    "schema": "string",
+                    "writable": true
+                },
+                {
+                    "@type": [
+                        "Property",
+                        "Longitude"
+                    ],
+                    "name": "desired_longitude",
+                    "schema": "double",
+                    "unit": "degreeOfArc",
+                    "writable": true
+                },
+                {
+                    "@type": [
+                        "Property",
+                        "Latitude"
+                    ],
+                    "name": "desired_latitude",
+                    "schema": "double",
+                    "unit": "degreeOfArc",
+                    "writable": true
+                },
+                {
+                    "@type": [
+                        "Property",
+                        "Longitude"
+                    ],
+                    "name": "longitude",
+                    "schema": "double",
+                    "unit": "degreeOfArc"
+                },
+                {
+                    "@type": [
+                        "Property",
+                        "Latitude"
+                    ],
+                    "name": "latitude",
+                    "schema": "double",
+                    "unit": "degreeOfArc"
+                },
+                {
+                    "@type": "Property",
+                    "name": "gps_date_time",
+                    "schema": "dateTime",
+                    "writable": true
+                },
+                {
+                    "@type": "Property",
+                    "name": "is_arrival",
+                    "schema": "boolean",
+                    "writable": true
+                }
+            ]
+        },
+        {
+            "@context": "dtmi:dtdl:context;2",
+            "@id": "dtmi:com:rg_az220:thf_sensor;1",
+            "@type": "Interface",
+            "displayName": "THF Device",
+            "contents": [
+                {
+                    "@type": "Property",
+                    "name": "thf_device_id",
+                    "schema": "string",
+                    "writable": true
+                },
+                {
+                    "@type": [
+                        "Property",
+                        "Temperature"
+                    ],
+                    "name": "desired_temperature",
+                    "schema": "double",
+                    "unit": "degreeCelsius",
+                    "writable": true
+                },
+                {
+                    "@type": [
+                        "Property",
+                        "RelativeHumidity"
+                    ],
+                    "name": "desired_humidity",
+                    "schema": "integer",
+                    "unit": "percent",
+                    "writable": true
+                },
+                {
+                    "@type": [
+                        "Property",
+                        "Temperature"
+                    ],
+                    "name": "temperature",
+                    "schema": "double",
+                    "unit": "degreeCelsius"
+                },
+                {
+                    "@type": [
+                        "Property",
+                        "RelativeHumidity"
+                    ],
+                    "name": "humidity",
+                    "schema": "integer",
+                    "unit": "percent"
+                },
+                {
+                    "@type": "Property",
+                    "name": "fan_alert",
+                    "schema": "boolean",
+                    "writable": true
+                },
+                {
+                    "@type": "Property",
+                    "name": "temperature_alert",
+                    "schema": "boolean",
+                    "writable": true
+                },
+                {
+                    "@type": "Property",
+                    "name": "humidity_alert",
+                    "schema": "boolean",
+                    "writable": true
+                }
+            ]
+        },
+        {
+            "@context": "dtmi:dtdl:context;2",
+            "@id": "dtmi:com:rg_az220:container;1",
+            "@type": "Interface",
+            "displayName": "Container",
+            "contents": [
+                {
+                    "@type": "Property",
+                    "name": "container_id",
+                    "schema": "string",
+                    "writable": true
+                },
+                {
+                    "@type": "Property",
+                    "name": "container_date_time",
+                    "schema": "dateTime",
+                    "writable": true
+                },
+                {
+                    "@type": "Property",
+                    "name": "is_arrival",
+                    "schema": "boolean",
+                    "writable": true
+                },
+                {
+                    "@type": "Relationship",
+                    "@id": "dtmi:com:rg_az220:container:con_gps;1",
+                    "name": "con_gps",
+                    "displayName": "has gps",
+                    "target": "dtmi:com:rg_az220:gps_device;1"
+                },
+                {
+                    "@type": "Relationship",
+                    "@id": "dtmi:com:rg_az220:container:con_thf;1",
+                    "name": "con_thf",
+                    "displayName": "has thf",
+                    "target": "dtmi:com:rg_az220:thf_sensor;1"
+                }
+            ]
+        },
+        {
+            "@context": "dtmi:dtdl:context;2",
+            "@id": "dtmi:com:rg_az220:robot_arm;1",
+            "@type": "Interface",
+            "displayName": "Robot Arm",
+            "contents": [
+                {
+                    "@type": "Property",
+                    "name": "robot_arm_id",
+                    "schema": "string",
+                    "writable": true
+                },
+                {
+                    "@type": [
+                        "Property",
+                        "Power"
+                    ],
+                    "name": "desired_power",
+                    "schema": "double",
+                    "unit": "kilowatt",
+                    "writable": true
+                },
+                {
+                    "@type": [
+                        "Property",
+                        "Pressure"
+                    ],
+                    "name": "desired_hydraulic_pressure",
+                    "schema": "double",
+                    "unit": "pascal"
+                },
+                {
+                    "@type": [
+                        "Property",
+                        "Power"
+                    ],
+                    "name": "power",
+                    "schema": "double",
+                    "unit": "kilowatt"
+                },
+                {
+                    "@type": [
+                        "Property",
+                        "Pressure"
+                    ],
+                    "name": "hydraulic_pressure",
+                    "schema": "double",
+                    "unit": "pascal"
+                },
+                {
+                    "@type": "Property",
+                    "name": "angle",
+                    "schema": {
+                        "@type": "Object",
+                        "fields": [
+                            {
+                                "name": "angle_1",
+                                "schema": "double"
+                            },
+                            {
+                                "name": "angle_2",
+                                "schema": "double"
+                            },
+                            {
+                                "name": "angle_3",
+                                "schema": "double"
+                            },
+                            {
+                                "name": "angle_4",
+                                "schema": "double"
+                            },
+                            {
+                                "name": "angle_5",
+                                "schema": "double"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "Property",
+                    "name": "angular_velocity",
+                    "schema": {
+                        "@type": "Object",
+                        "fields": [
+                            {
+                                "name": "angular_velocity_1",
+                                "schema": "double"
+                            },
+                            {
+                                "name": "angular_velocity_2",
+                                "schema": "double"
+                            },
+                            {
+                                "name": "angular_velocity_3",
+                                "schema": "double"
+                            },
+                            {
+                                "name": "angular_velocity_4",
+                                "schema": "double"
+                            },
+                            {
+                                "name": "angular_velocity_5",
+                                "schema": "double"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "Property",
+                    "name": "power_alert",
+                    "schema": "boolean",
+                    "writable": true
+                },
+                {
+                    "@type": "Property",
+                    "name": "hydraulic_pressure_alert",
+                    "schema": "boolean",
+                    "writable": true
+                },
+                {
+                    "@type": "Property",
+                    "name": "overload_alert",
+                    "schema": "boolean",
+                    "writable": true
+                }
+            ]
+        },
+        {
+            "@context": "dtmi:dtdl:context;2",
+            "@id": "dtmi:com:rg_az220:warehouse;1",
+            "@type": "Interface",
+            "displayName": "Warehouse",
+            "contents": [
+                {
+                    "@type": "Property",
+                    "name": "warehouse_name",
+                    "schema": "string",
+                    "writable": true
+                },
+                {
+                    "@type": "Property",
+                    "name": "warehouse_location",
+                    "schema": {
+                        "@type": "Object",
+                        "fields": [
+                            {
+                                "name": "latitude",
+                                "schema": "double"
+                            },
+                            {
+                                "name": "longitude",
+                                "schema": "double"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "Property",
+                    "name": "fan_alert",
+                    "schema": "boolean",
+                    "description": "fan is off",
+                    "writable": true
+                },
+                {
+                    "@type": "Property",
+                    "name": "temperature_alert",
+                    "schema": "boolean",
+                    "description": "over/under desired temperature",
+                    "writable": true
+                },
+                {
+                    "@type": "Property",
+                    "name": "humidity_alert",
+                    "schema": "boolean",
+                    "description": "over/under desired humidity",
+                    "writable": true
+                },
+                {
+                    "@type": "Relationship",
+                    "@id": "dtmi:com:rg_az220:warehouse:ware_ra;1",
+                    "name": "ware_ra",
+                    "displayName": "has ra",
+                    "target": "dtmi:com:rg_az220:robot_arm;1"
+                },
+                {
+                    "@type": "Relationship",
+                    "@id": "dtmi:com:rg_az220:warehouse:ware_thf;1",
+                    "name": "ware_thf",
+                    "displayName": "has thf",
+                    "target": "dtmi:com:rg_az220:thf_sensor;1"
+                },
+                {
+                    "@type": "Relationship",
+                    "@id": "dtmi:com:rg_az220:warehouse:ware_con;1",
+                    "name": "ware_con",
+                    "displayName": "has con",
+                    "target": "dtmi:com:rg_az220:container;1"
+                }
+            ]
+        },
+        {
+            "@context": "dtmi:dtdl:context;2",
+            "@id": "dtmi:com:rg_az220:factory;1",
+            "@type": "Interface",
+            "displayName": "Factory",
+            "contents": [
+                {
+                    "@type": "Property",
+                    "name": "factory_name",
+                    "schema": "string",
+                    "writable": true
+                },
+                {
+                    "@type": "Property",
+                    "name": "factory_location",
+                    "schema": {
+                        "@type": "Object",
+                        "fields": [
+                            {
+                                "name": "latitude",
+                                "schema": "double"
+                            },
+                            {
+                                "name": "longitude",
+                                "schema": "double"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "Property",
+                    "name": "fan_alert",
+                    "schema": "boolean",
+                    "description": "fan is off",
+                    "writable": true
+                },
+                {
+                    "@type": "Property",
+                    "name": "temperature_alert",
+                    "schema": "boolean",
+                    "description": "over/under desired temperature",
+                    "writable": true
+                },
+                {
+                    "@type": "Property",
+                    "name": "humidity_alert",
+                    "schema": "boolean",
+                    "description": "over/under desired humidity",
+                    "writable": true
+                },
+                {
+                    "@type": "Relationship",
+                    "@id": "dtmi:com:rg_az220:factory:fac_ra;1",
+                    "name": "fac_ra",
+                    "displayName": "has ra",
+                    "target": "dtmi:com:rg_az220:robot_arm;1"
+                },
+                {
+                    "@type": "Relationship",
+                    "@id": "dtmi:com:rg_az220:factory:fac_thf;1",
+                    "name": "fac_thf",
+                    "displayName": "has thf",
+                    "target": "dtmi:com:rg_az220:thf_sensor;1"
+                },
+                {
+                    "@type": "Relationship",
+                    "@id": "dtmi:com:rg_az220:factory:fac_con;1",
+                    "name": "fac_con",
+                    "displayName": "has con",
+                    "target": "dtmi:com:rg_az220:container;1"
+                }
+            ]
+        }
+    ]
+}

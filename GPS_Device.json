@@ -1,0 +1,52 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:com:rg_az220:gps_device;1",
+    "@type": "Interface",
+    "displayName": "GPS Device",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "gps_device_id",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": ["Property", "Longitude"],
+            "name": "desired_longitude",
+            "schema": "double",
+            "unit": "degreeOfArc",
+            "writable": true
+        },
+        {
+            "@type": ["Property", "Latitude"],
+            "name": "desired_latitude",
+            "schema": "double",
+            "unit": "degreeOfArc",
+            "writable": true
+        },
+        {
+            "@type": ["Property", "Longitude"],
+            "name": "longitude",
+            "schema": "double",
+            "unit": "degreeOfArc"
+        },
+        {
+            "@type": ["Property", "Latitude"],
+            "name": "latitude",
+            "schema": "double",
+            "unit": "degreeOfArc"
+        },
+        {
+            "@type": "Property",
+            "name": "gps_date_time",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "is_arrival",
+            "schema": "boolean",
+            "writable": true
+        }
+    ]
+}

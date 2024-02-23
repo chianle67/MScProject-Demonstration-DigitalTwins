@@ -1,0 +1,73 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:com:rg_az220:warehouse;1",
+    "@type": "Interface",
+    "displayName": "Warehouse",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "warehouse_name",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "warehouse_location",
+            "schema": {
+                "@type": "Object",
+                "fields": [
+                    {
+                        "name": "latitude",
+                        "schema": "double"
+                    },
+                    {
+                        "name": "longitude",
+                        "schema": "double"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Property",
+            "name": "fan_alert",
+            "schema": "boolean",
+            "description": "fan is off",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "temperature_alert",
+            "schema": "boolean",
+            "description": "over/under desired temperature",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "humidity_alert",
+            "schema": "boolean",
+            "description": "over/under desired humidity",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:rg_az220:warehouse:ware_ra;1",
+            "name": "ware_ra",
+            "displayName": "has ra",
+            "target": "dtmi:com:rg_az220:robot_arm;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:rg_az220:warehouse:ware_thf;1",
+            "name": "ware_thf",
+            "displayName": "has thf",
+            "target": "dtmi:com:rg_az220:thf_sensor;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:rg_az220:warehouse:ware_con;1",
+            "name": "ware_con",
+            "displayName": "has con",
+            "target": "dtmi:com:rg_az220:container;1"
+        }
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:com:rg_az220:robot_arm;1",
+    "@type": "Interface",
+    "displayName": "Robot Arm",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "robot_arm_id",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": ["Property", "Power"],
+            "name": "desired_power",
+            "schema": "double",
+            "unit": "kilowatt",
+            "writable": true
+        },
+        {
+            "@type": ["Property", "Pressure"],
+            "name": "desired_hydraulic_pressure",
+            "schema": "double",
+            "unit": "pascal"
+        },
+        {
+            "@type": ["Property", "Power"],
+            "name": "power",
+            "schema": "double",
+            "unit": "kilowatt"
+        },
+        {
+            "@type": ["Property", "Pressure"],
+            "name": "hydraulic_pressure",
+            "schema": "double",
+            "unit": "pascal"
+        },
+        {
+            "@type": "Property",
+            "name": "angle",
+            "schema": {
+                "@type": "Object",
+                "fields": [
+                {
+                  "name": "angle_1",
+                  "schema": "double"
+                  
+                },
+                {
+                  "name": "angle_2",
+                  "schema": "double"
+                },
+                {
+                  "name": "angle_3",
+                  "schema": "double"
+                },
+                { 
+                  "name": "angle_4",
+                  "schema": "double"
+                },
+                { 
+                  "name": "angle_5",
+                  "schema": "double"
+                }
+              ]
+            }
+        },
+        {
+            "@type": "Property",
+            "name": "angular_velocity",
+            "schema": {
+              "@type": "Object",
+              "fields": [
+                {
+                  "name": "angular_velocity_1",
+                  "schema": "double"
+                },
+                {
+                  "name": "angular_velocity_2",
+                  "schema": "double"
+                },
+                {
+                  "name": "angular_velocity_3",
+                  "schema": "double"
+                },
+                { 
+                  "name": "angular_velocity_4",
+                  "schema": "double"
+                },
+                { 
+                  "name": "angular_velocity_5",
+                  "schema": "double"
+                }
+              ]
+            }
+        },
+        {
+            "@type": "Property",
+            "name": "power_alert",
+            "schema": "boolean",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "hydraulic_pressure_alert",
+            "schema": "boolean",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "overload_alert",
+            "schema": "boolean",
+            "writable": true
+        }
+    ]
+}
