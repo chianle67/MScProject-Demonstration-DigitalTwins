@@ -1,0 +1,45 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:com:rg_az220:supplier;1",
+    "@type": "Interface",
+    "displayName": "Supplier",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "supplier_name",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "supplier_location",
+            "schema": {
+                "@type": "Object",
+                "fields": [
+                    {
+                        "name": "latitude",
+                        "schema": "double"
+                    },
+                    {
+                        "name": "longitude",
+                        "schema": "double"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:rg_az220:suppplier:sup_con;1",
+            "name": "sup_con",
+            "displayName": "has con",
+            "target": "dtmi:com:rg_az220:container;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:rg_az220:suppplier:sup_fac;1",
+            "name": "sup_fac",
+            "displayName": "has fac",
+            "target": "dtmi:com:rg_az220:factory;1"
+        }
+    ]
+}

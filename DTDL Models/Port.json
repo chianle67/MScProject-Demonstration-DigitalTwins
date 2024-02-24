@@ -1,0 +1,38 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:com:rg_az220:port;1",
+    "@type": "Interface",
+    "displayName": "Port",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "port_name",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "port_location",
+            "schema": {
+                "@type": "Object",
+                "fields": [
+                    {
+                        "name": "latitude",
+                        "schema": "double"
+                    },
+                    {
+                        "name": "longitude",
+                        "schema": "double"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:rg_az220:port:port_con;1",
+            "name": "port_con",
+            "displayName": "has con",
+            "target": "dtmi:com:rg_az220:container;1"
+        }
+    ]
+}

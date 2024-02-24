@@ -1,0 +1,99 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:com:rg_az220:factory;1",
+    "@type": "Interface",
+    "displayName": "Factory",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "factory_name",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "factory_location",
+            "schema": {
+                "@type": "Object",
+                "fields": [
+                    {
+                        "name": "latitude",
+                        "schema": "double"
+                    },
+                    {
+                        "name": "longitude",
+                        "schema": "double"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": ["Property", "Temperature"],
+            "name": "temperature",
+            "schema": "double",
+            "unit": "degreeCelsius"
+        },
+        {
+            "@type": ["Property", "RelativeHumidity"],
+            "name": "humidity",
+            "schema": "integer",
+            "unit": "percent"
+        },
+        {
+            "@type": "Property",
+            "name": "fan_alert",
+            "schema": "boolean",
+            "description": "fan is off",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "temperature_alert",
+            "schema": "boolean",
+            "description": "over/under desired temperature",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "humidity_alert",
+            "schema": "boolean",
+            "description": "over/under desired humidity",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:rg_az220:factory:fac_port;1",
+            "name": "fac_port",
+            "displayName": "has port",
+            "target": "dtmi:com:rg_az220:port;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:rg_az220:factory:fac_wa;1",
+            "name": "fac_wa",
+            "displayName": "has wa",
+            "target": "dtmi:com:rg_az220:warehouse;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:rg_az220:factory:fac_ra;1",
+            "name": "fac_ra",
+            "displayName": "has ra",
+            "target": "dtmi:com:rg_az220:robot_arm;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:rg_az220:factory:fac_thf;1",
+            "name": "fac_thf",
+            "displayName": "has thf",
+            "target": "dtmi:com:rg_az220:thf_sensor;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:rg_az220:factory:fac_con;1",
+            "name": "fac_con",
+            "displayName": "has con",
+            "target": "dtmi:com:rg_az220:container;1"
+        }
+    ]
+}
